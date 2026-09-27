@@ -162,12 +162,17 @@ def logout(response: Response) -> None:
     response.delete_cookie(auth.SESSION_COOKIE, path="/")
 
 
-@app.get("/api/auth/me", response_model=UserOut)
-def me(campus_customs_session: str | None = Cookie(default=None)) -> UserOut:
+@app.get("/api/auth/me", response_model=UserOut | None)
+def me(campus_customs_session: str | None = Cookie(default=None)) -> UserOut | None:
+    """Who the session cookie belongs to, or null.
+
+    Browsing signed out is a normal state, not an error, so this answers 200
+    with `null` rather than 401. Every page load calls it; returning an error
+    status would fill a visitor's console with red 401s for simply not having
+    an account yet. The same reasoning as `/api/chat/history`.
+    """
     row = current_user(campus_customs_session)
-    if row is None:
-        raise HTTPException(status_code=401, detail="Not signed in.")
-    return row_to_user(row)
+    return row_to_user(row) if row is not None else None
 
 
 # ----------------------------------------------------------------------- chat

@@ -115,7 +115,7 @@ check("provided test account logs in", status == 200 and me["id"] == 1, str(me.g
 check("login response never exposes the hash", "password_hash" not in (me or {}))
 
 status, me2 = call("/api/auth/me")
-check("session cookie resolves", status == 200 and me2["id"] == 1)
+check("session cookie resolves", status == 200 and me2 and me2["id"] == 1)
 
 status, _ = call("/api/auth/login", {"email": "test@campuscustoms.yale.edu",
                                      "password": "wrong"})
@@ -177,8 +177,9 @@ check("signed-in history loads", status == 200 and len(hist["messages"]) > 0,
       f"{len(hist['messages'])} messages")
 
 call("/api/auth/logout", {}, method="POST")
-status, _ = call("/api/auth/me")
-check("logout clears the session", status == 401)
+status, who = call("/api/auth/me")
+check("logout clears the session", status == 200 and who is None,
+      f"status={status} body={who}")
 
 with db() as c:
     guest_before = c.execute("SELECT COUNT(*) FROM chat_messages").fetchone()[0]

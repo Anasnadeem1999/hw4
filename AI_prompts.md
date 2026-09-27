@@ -171,3 +171,14 @@ the "Add to bag" button did nothing when clicked; `requirements.txt` was unpinne
 and the default Vite boilerplate README was still in the repo. A full verification
 script was added at `scripts/verify_all.py`, which checks 41 behaviours against the
 running servers and the database.
+
+### Follow-up
+
+> [the full assignment text, all 13 problems] Better make sure everything is pitch perfect!!
+
+What was missing after the first prompt: the earlier pass verified the API but never
+drove the actual browser, which left one real defect — every page load while signed
+out fired `GET /api/auth/me`, got a 401, and logged a console error, so a visitor
+without an account collected red errors just for being new. `/api/auth/me` now
+answers 200 with `null`, and `frontend/scripts/ui_check.mjs` was added to check 40
+shopper journeys in a real browser.

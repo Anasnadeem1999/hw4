@@ -228,7 +228,7 @@ Three endpoints in `backend/main.py`, with the cryptography in `backend/auth.py`
 | `POST /api/auth/register` | Creates a user, hashes the password, signs them straight in |
 | `POST /api/auth/login` | Verifies email + password, issues a session |
 | `POST /api/auth/logout` | Clears the session cookie |
-| `GET /api/auth/me` | Returns the signed-in shopper, or 401 |
+| `GET /api/auth/me` | Returns the signed-in shopper, or `null` |
 
 **Registration.** First name, last name, email, and password are validated by
 Pydantic — email must parse as a real address, password must be at least 8
@@ -1014,3 +1014,17 @@ redaction of the audit trail.
 
 It exits non-zero on any failure, so it can be run before a submission rather
 than read.
+
+`frontend/scripts/ui_check.mjs` is the browser-level companion. It drives the
+real UI in Chromium — every nav link, the grid with its size filter and price
+sort, a product page, signup, sign-out, sign-in, a wrong password, a chat turn
+with its cards landing on the page, clicking through to a product, history
+reloading on return, guest isolation, a phone viewport, and the console — and
+fails on any unexpected console error. 40 checks.
+
+    cd frontend && node scripts/ui_check.mjs
+
+Browsing signed out is treated as a normal state throughout, not an error:
+`GET /api/auth/me` answers 200 with `null` rather than 401, so a visitor
+without an account does not collect console errors simply for being new. The
+same reasoning applies to `GET /api/chat/history`.

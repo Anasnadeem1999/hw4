@@ -476,5 +476,523 @@
     "price_guardrail_corrected": false,
     "stop_reason": "completed",
     "reply": "We carry Yale T-shirts, crewnecks, hoodies, quarter-zips, jackets, and performance gear. If you tell me what you’re shopping for—maybe something for The Game, move-in week, or a residential college—I can point you to the best options."
+  },
+  {
+    "id": "f8d00522b2f5",
+    "at": "2026-09-27T00:39:08+00:00",
+    "duration_ms": 1990,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": "/",
+      "product_id": null
+    },
+    "message": "Hey",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "Hey—welcome to Campus Customs. What Yale gear are you looking for today?"
+  },
+  {
+    "id": "7cbd260ce98a",
+    "at": "2026-09-27T00:39:17+00:00",
+    "duration_ms": 2735,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": "/",
+      "product_id": null
+    },
+    "message": "Do you have hoodies in blue?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:39:16+00:00",
+        "tool": "search_products",
+        "args": "query='blue Yale hoodies', category='Hoodies', limit=4",
+        "result": "4 results: Yale Dad Hoodie, Yale Grandma Hoodie, Yale Grandpa Hoodie +1 more",
+        "ms": 3
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "yale-dad-hoodie",
+      "yale-grandma-hoodie",
+      "yale-grandpa-hoodie",
+      "yale-mom-hoodie"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got a few navy-blue hoodies. The Yale Dad hoodie has the broadest size run—XS through XXL—and the classic pick is the Yale Mom hoodie, also available in every size; the Grandma and Grandpa versions have more limited size availability."
+  },
+  {
+    "id": "98f0e1efe310",
+    "at": "2026-09-27T00:39:32+00:00",
+    "duration_ms": 4301,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": "/",
+      "product_id": null
+    },
+    "message": "white?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:39:29+00:00",
+        "tool": "search_products",
+        "args": "query='white hoodies', category='Hoodies', limit=8",
+        "result": "8 results: Brooks Brothers Double Knit Full Zip Hoodie Yale, Champion Reverse Weave Hoodie 1, The Forest School Hoodie +5 more",
+        "ms": 8
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "brooks-brothers-double-knit-full-zip-hoodie-yale",
+      "champion-reverse-weave-hoodie-1",
+      "the-forest-school-hoodie",
+      "yale-dad-hoodie",
+      "yale-grandpa-hoodie",
+      "basic-hoodie-big-yale",
+      "champion-full-zip-hood",
+      "district-vit-hoodie-vintage-bulldog"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "The hoodie options I found are navy or gray with white Yale graphics—not solid white. The Yale Dad and Basic Hoodie Big Yale are the cleanest picks, both $68 and currently showing sizes XS–XXL."
+  },
+  {
+    "id": "405c9a8ed0e6",
+    "at": "2026-09-27T00:39:43+00:00",
+    "duration_ms": 2987,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": "/",
+      "product_id": null
+    },
+    "message": "Hoodies in white?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:39:41+00:00",
+        "tool": "search_products",
+        "args": "query='white hoodies', category='Hoodies', limit=8",
+        "result": "8 results: Brooks Brothers Double Knit Full Zip Hoodie Yale, Champion Reverse Weave Hoodie 1, The Forest School Hoodie +5 more",
+        "ms": 8
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "brooks-brothers-double-knit-full-zip-hoodie-yale",
+      "champion-reverse-weave-hoodie-1",
+      "the-forest-school-hoodie",
+      "yale-dad-hoodie",
+      "yale-grandpa-hoodie",
+      "basic-hoodie-big-yale",
+      "champion-full-zip-hood",
+      "district-vit-hoodie-vintage-bulldog"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "The hoodies I found are navy or gray with white Yale graphics—not solid white. The Brooks Brothers full-zip comes in a white colorway, though its listing describes the garment itself as navy; if you mean an all-white hoodie, I’m not seeing one in the current catalogue."
+  },
+  {
+    "id": "d4d203717703",
+    "at": "2026-09-27T00:39:53+00:00",
+    "duration_ms": 2788,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": "/",
+      "product_id": null
+    },
+    "message": "in pink?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:39:52+00:00",
+        "tool": "search_products",
+        "args": "query='pink hoodies', category='Hoodies', limit=8",
+        "result": "8 results: Basic Hoodie Big Yale, Brooks Brothers Double Knit Full Zip Hoodie Yale, Champion Full Zip Hood +5 more",
+        "ms": 7
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "basic-hoodie-big-yale",
+      "brooks-brothers-double-knit-full-zip-hoodie-yale",
+      "champion-full-zip-hood",
+      "champion-reverse-weave-hoodie-1",
+      "crew-left-chest-hoodie",
+      "district-vit-hoodie-vintage-bulldog",
+      "district-vit-hoodie-vintage-sailor-bulldog",
+      "fencing-left-chest-hoodie"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "I’m not finding a pink hoodie in the current catalogue. The closest options are the navy-and-white Basic Hoodie Big Yale or a gray hoodie with a white bulldog graphic; both are showing a full XS–XXL run."
+  },
+  {
+    "id": "0abf084753e8",
+    "at": "2026-09-27T01:05:55+00:00",
+    "duration_ms": 2613,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": "/products/baseball-left-chest-crewneck",
+      "product_id": "baseball-left-chest-crewneck"
+    },
+    "message": "what do you know about investment banking recerutiment process at evercore",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "I’m here to help with Yale merchandise, not investment-banking recruitment. I can help you find a Yale crewneck, hoodie, or something for The Game instead."
+  },
+  {
+    "id": "a46d17b85bde",
+    "at": "2026-09-27T01:06:24+00:00",
+    "duration_ms": 3313,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": "/products/baseball-left-chest-crewneck",
+      "product_id": "baseball-left-chest-crewneck"
+    },
+    "message": "but this will also info help me in identifying the right merch",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "I can help you identify the right Yale merch, but I can’t advise on Evercore recruiting. If you’re choosing a piece for recruiting events, campus wear, or The Game, tell me the setting and your preferred style."
+  },
+  {
+    "id": "6c10d6026d49",
+    "at": "2026-09-27T01:09:19+00:00",
+    "duration_ms": 114695,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": "/products/baseball-left-chest-crewneck",
+      "product_id": "baseball-left-chest-crewneck"
+    },
+    "message": "which merch should i wear for the evercore coffee chats from this catalogue",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T01:07:27+00:00",
+        "tool": "search_products",
+        "args": "query='polished Yale apparel suitable for Evercore coffee chats, understated campus wear', limit=4",
+        "result": "4 results: Big Yale Tri Blend T Shirt, Yale Diving T Shirt, Yale Grandma Hoodie +1 more",
+        "ms": 2
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "big-yale-tri-blend-t-shirt",
+      "yale-diving-t-shirt",
+      "yale-grandma-hoodie",
+      "yale-mom-hoodie"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "For an Evercore coffee chat, I’d keep it understated: the Yale Diving T-shirt in heather gray or navy is the best fit from what I found, with a clean Yale mark rather than a loud graphic. I’d save the hoodies for campus wear; the coffee chat is better served by a neat shirt layered under a jacket or overshirt."
+  },
+  {
+    "id": "d6cebdfa7f63",
+    "at": "2026-09-27T01:13:01+00:00",
+    "duration_ms": 3705,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": "/",
+      "product_id": null
+    },
+    "message": "What shirts do you have?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T01:13:00+00:00",
+        "tool": "search_products",
+        "args": "query='shirts Yale tees including The Game, everyday Yale, campus graphics, and residential college shirts', category='T-Shirts', limit=8",
+        "result": "8 results: 2025 Yale Vs Harvard T Shirt, Big Yale Tri Blend T Shirt, Yale Diving T Shirt +5 more",
+        "ms": 9
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "2025-yale-vs-harvard-t-shirt",
+      "big-yale-tri-blend-t-shirt",
+      "yale-diving-t-shirt",
+      "yale-bowl-t-shirt",
+      "yale-dad-t-shirt",
+      "yale-sports-t-shirt-field-hockey",
+      "district-tri-blend-t-shirt-vintage-shield",
+      "t-felt-y-heavyweight"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got a good shirt range—the **2025 Yale–Harvard Game tee** is the one I’d point you to for The Game, while the **Big Yale Tri Blend** is an easy everyday Yale shirt. The **Yale Bowl** has a vintage campus feel, and the **District vintage shield tee** is a quieter classic; they’re all **$32**, with current sizes shown on the product cards."
+  },
+  {
+    "id": "4ffc5f02a162",
+    "at": "2026-09-27T01:14:58+00:00",
+    "duration_ms": 3965,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": "/products/champion-reverse-weave-crewneck",
+      "product_id": "champion-reverse-weave-crewneck"
+    },
+    "message": "Do you have this in large? And how much is it?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T01:14:57+00:00",
+        "tool": "get_price",
+        "args": "product_id='champion-reverse-weave-crewneck'",
+        "result": "Champion Reverse Weave Crewneck, price=58.0",
+        "ms": 0
+      },
+      {
+        "at": "2026-09-27T01:14:57+00:00",
+        "tool": "check_size_availability",
+        "args": "product_id='champion-reverse-weave-crewneck', size='L'",
+        "result": "Champion Reverse Weave Crewneck, size=L, in_stock=False, quantity=0",
+        "ms": 0
+      }
+    ],
+    "tool_call_count": 2,
+    "tool_budget": 8,
+    "products_returned": [
+      "champion-reverse-weave-crewneck"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "The Champion Reverse Weave Crewneck is **$58**, but **L is sold out**. It’s currently available in **M and XL**."
+  },
+  {
+    "id": "562367c85392",
+    "at": "2026-09-27T01:15:01+00:00",
+    "duration_ms": 2695,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "What shirts do you have?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T01:15:00+00:00",
+        "tool": "search_products",
+        "args": "query='Yale shirts, including Yale–Harvard Game, everyday Yale, vintage campus graphics, and residential-college tees', category='T-Shirts', limit=8",
+        "result": "8 results: 2025 Yale Vs Harvard T Shirt, Yale Bowl T Shirt, Big Yale Tri Blend T Shirt +5 more",
+        "ms": 3
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "2025-yale-vs-harvard-t-shirt",
+      "yale-bowl-t-shirt",
+      "big-yale-tri-blend-t-shirt",
+      "district-tri-blend-t-shirt-vintage-shield",
+      "yale-diving-t-shirt",
+      "yale-dad-t-shirt",
+      "yale-sports-t-shirt-field-hockey",
+      "t-felt-y-heavyweight"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got a good shirt range, Test User. I’d point you to the **2025 Yale–Harvard Game tee** for The Game, the **Yale Bowl tee** for a vintage campus feel, or the **Big Yale Tri Blend** for an easy everyday Yale shirt. They’re **$32 each**, with current sizes shown on the product cards."
+  },
+  {
+    "id": "3cd59b7a7ea5",
+    "at": "2026-09-27T01:15:02+00:00",
+    "duration_ms": 1522,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "Who won the 1998 world cup?",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "That’s outside what I can help with here. I can help you find Yale merchandise instead—shirts, crewnecks, hoodies, or something for The Game."
+  },
+  {
+    "id": "2db2d9d8d266",
+    "at": "2026-09-27T01:15:03+00:00",
+    "duration_ms": 0,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "my card is [redacted:16 digits]",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "blocked_sensitive_input",
+    "reply": "Please don't share card numbers, passwords, or similar details here — this chat isn't a secure place for them, and I have no way to take a payment. I've not kept what you just sent. If you'd like to buy something, you can order it on the product page or come by the shop at 57 Broadway. Happy to help you find the right piece in the meantime."
+  },
+  {
+    "id": "368915abff70",
+    "at": "2026-09-27T01:15:03+00:00",
+    "duration_ms": 631,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "What do you sell?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T01:15:03+00:00",
+        "tool": "list_categories",
+        "args": "-",
+        "result": "6 results: T-Shirts, Crewnecks, Hoodies +3 more",
+        "ms": 1
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We carry Yale T-shirts, crewnecks, hoodies, quarter-zips, jackets, and performance gear. If you tell me what you’re shopping for—maybe something for The Game, move-in week, or a residential college—I can point you to the best options."
+  },
+  {
+    "id": "9adf941fd08f",
+    "at": "2026-09-27T01:15:17+00:00",
+    "duration_ms": 3447,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": "/",
+      "product_id": null
+    },
+    "message": "What shirts do you have?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T01:15:16+00:00",
+        "tool": "search_products",
+        "args": "query='Yale shirts', category='T-Shirts', limit=4",
+        "result": "4 results: 2025 Yale Vs Harvard T Shirt, Big Yale Tri Blend T Shirt, Yale Bowl T Shirt +1 more",
+        "ms": 2
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "2025-yale-vs-harvard-t-shirt",
+      "big-yale-tri-blend-t-shirt",
+      "yale-bowl-t-shirt",
+      "yale-dad-t-shirt"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got a good shirt range, Test User. I’d point you to the **2025 Yale–Harvard Game tee** for The Game, the **Yale Bowl tee** for a vintage campus feel, or the **Big Yale Tri Blend** for an easy everyday Yale shirt. They’re **$32 each**, with current sizes shown on the product cards."
+  },
+  {
+    "id": "8073fa98b6e1",
+    "at": "2026-09-27T01:15:50+00:00",
+    "duration_ms": 3467,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": "/",
+      "product_id": null
+    },
+    "message": "What shirts do you have?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T01:15:49+00:00",
+        "tool": "search_products",
+        "args": "query='shirts', category='T-Shirts', limit=8",
+        "result": "8 results: 2025 Yale Vs Harvard T Shirt, Benjamin Franklin T Shirt, Big Yale Tri Blend T Shirt +5 more",
+        "ms": 2
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "2025-yale-vs-harvard-t-shirt",
+      "benjamin-franklin-t-shirt",
+      "big-yale-tri-blend-t-shirt",
+      "boola-boola-t-shirt",
+      "district-tri-blend-t-shirt-vintage-shield",
+      "football-left-chest-t-shirt",
+      "grace-hopper-logo-t-shirt",
+      "morse-logo-t-shirt"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got a strong shirt range, Test User. I’d point you to the **2025 Yale–Harvard Game tee** for The Game, the **Boola Boola tee** for classic Yale spirit, or a **Grace Hopper** or **Morse** tee if you’re shopping for a residential college. They’re all **$32**, and the current sizes are shown on the product cards."
   }
 ]

@@ -143,4 +143,14 @@ What was missing after the first prompt: the file had been created as `ai_prompt
 
 > Okay so now we are working on problem 12, I will be needing an append-only output/audit_trail.json that properly records the agent-loop activity, including the time, and tool name, and short arguments/results, and the stop reason. The file should not be wiped between the runs. I will also need safety rules for the agent in prompts/prompt.md. Finally, please finish output/harness.md so it explains the following things, the model fields in models.py and why they were chosen, the tools and abilities, the safety rules, the loop limits, the result caps, the models, and finally how to run the frontend and backend
 
-## Problem 13 — *(not started)*
+## Problem 13 — Push to GitHub and Submit the URL
+
+### Prompt
+
+> Alright buddy now we are finally on the Problem 13, we will need to put the project in a folder named hw4 and also push it to a public GitHub repository. I will be submitting the repository URL on Canvas.
+> The repository should have this particular structure:
+> hw4 - AI_prompts.md - requirements.txt - .env.example - .gitignore - README.md - frontend/ - backend/ (main.py, agent.py, models.py, tools.py, prompts/prompt.md) - output/ (harness.md, design.md, usability.md, app_check.html, app_check_images/, audit_trail.json)
+> The local data that shall not be committed!! data/ - campus_customs.db - products/
+> Please make sure that real .env also must not be committed. Please use .gitignore and include .env.example with placeholders. The README should explain how to run the frontend and backend after the data pack has been placed in the project. Now will you please help me check the final file structure and prepare it for the public GitHub repository.
+
+Repository: <https://github.com/Anasnadeem1999/hw4>

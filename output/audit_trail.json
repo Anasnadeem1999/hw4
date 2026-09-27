@@ -98,5 +98,383 @@
     "price_guardrail_corrected": false,
     "stop_reason": "completed",
     "reply": "No—the Boola Boola T Shirt is available in navy, white, and gray, but not black."
+  },
+  {
+    "id": "6b19566c984c",
+    "at": "2026-09-27T00:34:52+00:00",
+    "duration_ms": 3986,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": "/products/champion-reverse-weave-crewneck",
+      "product_id": "champion-reverse-weave-crewneck"
+    },
+    "message": "Do you have this in large? And how much is it?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:34:50+00:00",
+        "tool": "check_size_availability",
+        "args": "product_id='champion-reverse-weave-crewneck', size='L'",
+        "result": "Champion Reverse Weave Crewneck, size=L, in_stock=False, quantity=0",
+        "ms": 1
+      },
+      {
+        "at": "2026-09-27T00:34:50+00:00",
+        "tool": "get_price",
+        "args": "product_id='champion-reverse-weave-crewneck'",
+        "result": "Champion Reverse Weave Crewneck, price=58.0",
+        "ms": 0
+      }
+    ],
+    "tool_call_count": 2,
+    "tool_budget": 8,
+    "products_returned": [
+      "champion-reverse-weave-crewneck"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "The Champion Reverse Weave Crewneck is **$58**, but **L is sold out**. It’s currently available in **M and XL**."
+  },
+  {
+    "id": "4d5e29508d76",
+    "at": "2026-09-27T00:34:54+00:00",
+    "duration_ms": 2568,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "What shirts do you have?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:34:53+00:00",
+        "tool": "search_products",
+        "args": "query='shirts', category='T-Shirts', limit=4",
+        "result": "4 results: 2025 Yale Vs Harvard T Shirt, Benjamin Franklin T Shirt, Big Yale Tri Blend T Shirt +1 more",
+        "ms": 2
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "2025-yale-vs-harvard-t-shirt",
+      "benjamin-franklin-t-shirt",
+      "big-yale-tri-blend-t-shirt",
+      "boola-boola-t-shirt"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got a few shirts—the **2025 Yale–Harvard Game tee** is a great pick for The Game, and the **Big Yale Tri Blend** is a softer, more everyday Yale option. The **Boola Boola tee** is another good one if you want a classic campus graphic; the shirts are $32, with sizes shown on the product cards."
+  },
+  {
+    "id": "3a43aa8d5b0d",
+    "at": "2026-09-27T00:34:56+00:00",
+    "duration_ms": 1202,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "Who won the 1998 world cup?",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "That’s outside what I can help with here. I can help you find Yale merchandise instead—shirts, crewnecks, hoodies, or something for The Game."
+  },
+  {
+    "id": "7a505bcc7128",
+    "at": "2026-09-27T00:34:56+00:00",
+    "duration_ms": 0,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "my card is [redacted:16 digits]",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "blocked_sensitive_input",
+    "reply": "Please don't share card numbers, passwords, or similar details here — this chat isn't a secure place for them, and I have no way to take a payment. I've not kept what you just sent. If you'd like to buy something, you can order it on the product page or come by the shop at 57 Broadway. Happy to help you find the right piece in the meantime."
+  },
+  {
+    "id": "976857389e19",
+    "at": "2026-09-27T00:34:59+00:00",
+    "duration_ms": 3705,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "What do you sell?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:34:57+00:00",
+        "tool": "list_categories",
+        "args": "-",
+        "result": "6 results: T-Shirts, Crewnecks, Hoodies +3 more",
+        "ms": 1
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We carry Yale T-shirts, crewnecks, hoodies, quarter-zips, jackets, and performance gear. If you tell me what you’re shopping for—maybe something for The Game, move-in week, or a residential college—I can point you to the best options."
+  },
+  {
+    "id": "4c582e87da08",
+    "at": "2026-09-27T00:35:17+00:00",
+    "duration_ms": 2924,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": "/products/champion-reverse-weave-crewneck",
+      "product_id": "champion-reverse-weave-crewneck"
+    },
+    "message": "Do you have this in large? And what does it cost?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:35:16+00:00",
+        "tool": "check_size_availability",
+        "args": "product_id='champion-reverse-weave-crewneck', size='L'",
+        "result": "Champion Reverse Weave Crewneck, size=L, in_stock=False, quantity=0",
+        "ms": 2
+      },
+      {
+        "at": "2026-09-27T00:35:16+00:00",
+        "tool": "get_price",
+        "args": "product_id='champion-reverse-weave-crewneck'",
+        "result": "Champion Reverse Weave Crewneck, price=58.0",
+        "ms": 1
+      }
+    ],
+    "tool_call_count": 2,
+    "tool_budget": 8,
+    "products_returned": [
+      "champion-reverse-weave-crewneck"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "The Champion Reverse Weave Crewneck is sold out in large, I’m afraid. It’s $58, and it’s currently available in M and XL."
+  },
+  {
+    "id": "4f6e15ed453d",
+    "at": "2026-09-27T00:35:22+00:00",
+    "duration_ms": 2333,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": "/",
+      "product_id": null
+    },
+    "message": "What shirts do you have?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:35:21+00:00",
+        "tool": "search_products",
+        "args": "query='shirts', category='T-Shirts', limit=8",
+        "result": "8 results: 2025 Yale Vs Harvard T Shirt, Benjamin Franklin T Shirt, Big Yale Tri Blend T Shirt +5 more",
+        "ms": 3
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "2025-yale-vs-harvard-t-shirt",
+      "benjamin-franklin-t-shirt",
+      "big-yale-tri-blend-t-shirt",
+      "boola-boola-t-shirt",
+      "district-tri-blend-t-shirt-vintage-shield",
+      "football-left-chest-t-shirt",
+      "grace-hopper-logo-t-shirt",
+      "morse-logo-t-shirt"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got a good range of tees. The Harvard-Yale Game shirt is a fun pick for The Game, while the District vintage shield is a quieter everyday Yale look; if you want residential-college pride, the Grace Hopper and Morse tees are both worth a look. They’re all $32, with the current sizes shown on the product cards."
+  },
+  {
+    "id": "7eefcaa0b5e0",
+    "at": "2026-09-27T00:36:45+00:00",
+    "duration_ms": 3626,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": "/products/champion-reverse-weave-crewneck",
+      "product_id": "champion-reverse-weave-crewneck"
+    },
+    "message": "Do you have this in large? And how much is it?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:36:44+00:00",
+        "tool": "get_price",
+        "args": "product_id='champion-reverse-weave-crewneck'",
+        "result": "Champion Reverse Weave Crewneck, price=58.0",
+        "ms": 1
+      },
+      {
+        "at": "2026-09-27T00:36:44+00:00",
+        "tool": "check_size_availability",
+        "args": "product_id='champion-reverse-weave-crewneck', size='L'",
+        "result": "Champion Reverse Weave Crewneck, size=L, in_stock=False, quantity=0",
+        "ms": 1
+      }
+    ],
+    "tool_call_count": 2,
+    "tool_budget": 8,
+    "products_returned": [
+      "champion-reverse-weave-crewneck"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "The Champion Reverse Weave Crewneck is **$58**, but **L is sold out**. It’s currently available in **M and XL**."
+  },
+  {
+    "id": "fe9f17a96bff",
+    "at": "2026-09-27T00:36:49+00:00",
+    "duration_ms": 3393,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "What shirts do you have?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:36:47+00:00",
+        "tool": "search_products",
+        "args": "query='shirts', category='T-Shirts', limit=8",
+        "result": "8 results: 2025 Yale Vs Harvard T Shirt, Benjamin Franklin T Shirt, Big Yale Tri Blend T Shirt +5 more",
+        "ms": 5
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "2025-yale-vs-harvard-t-shirt",
+      "benjamin-franklin-t-shirt",
+      "big-yale-tri-blend-t-shirt",
+      "boola-boola-t-shirt",
+      "district-tri-blend-t-shirt-vintage-shield",
+      "football-left-chest-t-shirt",
+      "grace-hopper-logo-t-shirt",
+      "morse-logo-t-shirt"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got a good range of shirts, Test User. The **2025 Yale–Harvard Game tee** is the one I’d point you to for The Game, while the **Big Yale Tri Blend** is an easy everyday Yale shirt; there are also classic campus graphics and residential-college tees like **Boola Boola, Grace Hopper, and Morse**. Prices and current sizes are on the product cards."
+  },
+  {
+    "id": "27280e46e8d5",
+    "at": "2026-09-27T00:36:50+00:00",
+    "duration_ms": 1336,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "Who won the 1998 world cup?",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "That’s outside what I can help with here. I can help you find Yale merchandise instead—shirts, crewnecks, hoodies, or something for The Game."
+  },
+  {
+    "id": "ebc4dd89b564",
+    "at": "2026-09-27T00:36:50+00:00",
+    "duration_ms": 0,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "my card is [redacted:16 digits]",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "blocked_sensitive_input",
+    "reply": "Please don't share card numbers, passwords, or similar details here — this chat isn't a secure place for them, and I have no way to take a payment. I've not kept what you just sent. If you'd like to buy something, you can order it on the product page or come by the shop at 57 Broadway. Happy to help you find the right piece in the meantime."
+  },
+  {
+    "id": "c3206f05f4bf",
+    "at": "2026-09-27T00:36:51+00:00",
+    "duration_ms": 672,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "What do you sell?",
+    "tool_calls": [
+      {
+        "at": "2026-09-27T00:36:50+00:00",
+        "tool": "list_categories",
+        "args": "-",
+        "result": "6 results: T-Shirts, Crewnecks, Hoodies +3 more",
+        "ms": 1
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We carry Yale T-shirts, crewnecks, hoodies, quarter-zips, jackets, and performance gear. If you tell me what you’re shopping for—maybe something for The Game, move-in week, or a residential college—I can point you to the best options."
   }
 ]

@@ -44,6 +44,10 @@ docs/progress.md
 # are local diagnostics, not deliverables.
 output/audit_trail.corrupt-*.json
 
+# Scratch renders produced while checking the report
+output/_report_preview.png
+frontend/scripts/report_preview.png
+
 # ---------------------------------------------------------------------------
 # Editors / OS
 # ---------------------------------------------------------------------------

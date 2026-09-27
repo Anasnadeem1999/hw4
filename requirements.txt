@@ -1,6 +1,6 @@
-fastapi
-uvicorn[standard]
-pydantic
-email-validator
-pydantic-ai-slim[openai]
-python-dotenv
+fastapi==0.141.1
+uvicorn[standard]==0.54.0
+pydantic==2.13.5
+email-validator==2.3.0
+pydantic-ai-slim[openai]==2.51.0
+python-dotenv==1.2.3

@@ -14,10 +14,14 @@ const CATEGORY_LINKS = [
 
 export default function Home() {
   const [featured, setFeatured] = useState<ProductSummary[]>([])
+  const [total, setTotal] = useState<number | null>(null)
 
   useEffect(() => {
     fetchProducts()
-      .then((all) => setFeatured(all.slice(0, 8)))
+      .then((all) => {
+        setFeatured(all.slice(0, 8))
+        setTotal(all.length)
+      })
       .catch(() => setFeatured([]))
   }, [])
 
@@ -50,7 +54,7 @@ export default function Home() {
 
           <div className="hero__meta">
             <div>
-              <p className="hero__stat-value">102</p>
+              <p className="hero__stat-value">{total ?? '—'}</p>
               <p className="hero__stat-label">Pieces in stock</p>
             </div>
             <div>

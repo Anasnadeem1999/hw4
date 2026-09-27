@@ -125,11 +125,13 @@ class PageContext(BaseModel):
 
 
 class ChatRequest(BaseModel):
-    message: str = Field(min_length=1, max_length=2000)
+    message: str = Field(min_length=1, max_length=MAX_MESSAGE_CHARS)
     # Guests carry their own history in the request, since nothing is saved for
     # them. For signed-in shoppers the server loads it from the database and
     # this is ignored.
-    history: list[ChatMessage] = Field(default_factory=list, max_length=40)
+    history: list[ChatMessage] = Field(
+        default_factory=list, max_length=MAX_HISTORY_TURNS
+    )
     page: PageContext | None = None
 
 

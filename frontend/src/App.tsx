@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useMatch } from 'react-router-dom'
 import ChatMatches from './components/ChatMatches'
 import ChatWidget from './components/ChatWidget'
 import Footer from './components/Footer'
@@ -11,11 +11,16 @@ import ProductDetail from './pages/ProductDetail'
 import Products from './pages/Products'
 
 export default function App() {
+  // On a product page the shopper is already looking at something specific, and
+  // a results band above it would push that product below the fold. The chat
+  // panel still lists the matches inline there.
+  const onProductPage = useMatch('/products/:productId')
+
   return (
     <>
       <NavBar />
       <main>
-        <ChatMatches />
+        {!onProductPage && <ChatMatches />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

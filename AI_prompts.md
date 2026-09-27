@@ -154,3 +154,20 @@ What was missing after the first prompt: the file had been created as `ai_prompt
 > Please make sure that real .env also must not be committed. Please use .gitignore and include .env.example with placeholders. The README should explain how to run the frontend and backend after the data pack has been placed in the project. Now will you please help me check the final file structure and prepare it for the public GitHub repository.
 
 Repository: <https://github.com/Anasnadeem1999/hw4>
+
+---
+
+## Final review pass
+
+### Prompt
+
+> Will you please rerun everything from start to end. Making sure everything is pitch perfect. Making improvements along the way. I need it 100/100.
+
+What this pass changed: six defects were found and fixed — the declared loop limits
+`MAX_MESSAGE_CHARS` and `MAX_HISTORY_TURNS` were documented as enforced but the
+request model still hardcoded the numbers; the chat results band pushed the product
+below the fold on product pages; the home page hero hardcoded the product count;
+the "Add to bag" button did nothing when clicked; `requirements.txt` was unpinned;
+and the default Vite boilerplate README was still in the repo. A full verification
+script was added at `scripts/verify_all.py`, which checks 41 behaviours against the
+running servers and the database.

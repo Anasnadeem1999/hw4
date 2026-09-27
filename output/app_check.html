@@ -145,11 +145,11 @@
         <p class="caption">
           On the Champion Reverse Weave Crewneck page I asked the assistant
           <em>"Do you have this in large? And what does it cost?"</em> It answered
-          <strong>"sold out in L… available in M and XL… the price is $58"</strong>.
-          The database has that product at <code>L = 0</code>, <code>M = 12</code>,
-          <code>XL = 12</code>, with <code>XS</code>, <code>S</code> and
-          <code>XXL</code> also at zero, priced at <code>$58.00</code> — so every
-          part of the answer is true.
+          <strong>"sold out in large… it's $58… currently available in M and
+          XL"</strong>. The database has that product at <code>L = 0</code>,
+          <code>M = 12</code>, <code>XL = 12</code>, with <code>XS</code>,
+          <code>S</code> and <code>XXL</code> also at zero, priced at
+          <code>$58.00</code> — so every part of the answer is true.
         </p>
 
         <figure>
@@ -163,9 +163,12 @@
         <div class="proof">
           <h3>What this proves</h3>
           The assistant refused the sale it could not honour rather than guessing.
-          It named the exact sizes left, quoted the real price, and the product card
-          it returned shows <code>M · XL</code> — the same two sizes — because the
-          card is built from the database row the tool read, not from the reply text.
+          The strongest evidence is that the page agrees with it: the size selector
+          behind the chat shows <code>XS</code> and <code>S</code> struck through as
+          <strong>SOLD OUT</strong> and <code>M</code> as <strong>12 LEFT</strong>,
+          the heading reads <strong>2 of 6 in stock</strong>, and the product card in
+          the chat shows <code>M · XL</code>. The page and the agent are reading the
+          same database rows, so they cannot disagree.
         </div>
       </section>
 
@@ -178,10 +181,10 @@
 
         <p class="caption">
           From the home page I asked <em>"What shirts do you have?"</em> The agent
-          searched the catalogue and <strong>four matching products appeared on the
+          searched the catalogue and <strong>eight matching products appeared on the
           page</strong> under "From your chat", as full product cards with image,
           name, price and a short description — alongside compact versions inside the
-          chat panel.
+          chat panel, each listing the sizes currently in stock.
         </p>
 
         <figure>

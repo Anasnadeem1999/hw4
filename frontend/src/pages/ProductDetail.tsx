@@ -10,11 +10,13 @@ export default function ProductDetail() {
   const { productId = '' } = useParams()
   const [product, setProduct] = useState<Product | null>(null)
   const [selectedSize, setSelectedSize] = useState<string | null>(null)
+  const [reserved, setReserved] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     setProduct(null)
     setSelectedSize(null)
+    setReserved(false)
     setError(null)
     fetchProduct(productId)
       .then(setProduct)
@@ -136,9 +138,24 @@ export default function ProductDetail() {
               </div>
             </div>
 
-            <button className="button button--primary button--block" disabled={!selectedSize}>
-              {selectedSize ? `Add ${selectedSize} to bag` : 'Select a size'}
+            <button
+              className="button button--primary button--block"
+              disabled={!selectedSize}
+              onClick={() => setReserved(true)}
+            >
+              {selectedSize ? `Hold ${selectedSize} at the shop` : 'Select a size'}
             </button>
+
+            {/* This is coursework, so there is no cart and no checkout. Rather
+                than a button that silently does nothing, saying so is the
+                honest version. */}
+            {reserved && selectedSize && (
+              <p className="notice" style={{ marginTop: 16 }} role="status">
+                Noted — {product.name} in {selectedSize}. This site is a course
+                project, so no order is placed and no payment is taken. Come by
+                57 Broadway, and the shop can put one aside for you.
+              </p>
+            )}
           </div>
         </div>
       </div>

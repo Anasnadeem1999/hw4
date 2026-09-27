@@ -37,5 +37,6 @@ console.log('\nheadings:')
 for (const h of await page.locator('h2').allInnerTexts()) console.log('  -', h)
 console.log('\nfailed requests:', failed.length ? failed : 'none')
 
-await page.screenshot({ path: resolve(HERE, '../../output/_report_preview.png') })
+// Rendered only to confirm the page is not blank; not a deliverable.
+await page.screenshot({ path: resolve(HERE, 'report_preview.png') })
 await browser.close()

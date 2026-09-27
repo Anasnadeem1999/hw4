@@ -618,6 +618,11 @@ The one wrinkle: `ProductCard` takes a `ProductSummary`, and the chat returns a
 shapes are reconciled inside `ChatMatches` rather than by giving `ProductCard`
 a second code path, so the grid component stays single-purpose.
 
+On a product page the band is deliberately **not** rendered: the shopper is
+already looking at something specific, and a results strip above it would push
+that product below the fold. The chat panel still lists the matches inline
+there.
+
 The compact cards inside the chat log are kept as well — they tie a specific
 answer to the products that answer was about, which the page section cannot do
 once a second search replaces it. Both link to the same detail page.
@@ -986,3 +991,26 @@ two turns finishing together cannot overwrite each other and an interrupted
 write cannot truncate the history. A trail that has been corrupted by something
 else is moved aside rather than overwritten. An audit failure is swallowed — it
 must never take down a shopper's conversation.
+
+
+---
+
+## Verification
+
+`scripts/verify_all.py` exercises the whole system against the running servers
+and checks each answer against SQL rather than trusting the reply. Run it with
+both servers up:
+
+    .venv/Scripts/python.exe scripts/verify_all.py
+
+It covers 41 behaviours: catalogue and image serving, category normalisation,
+detail accuracy against `catalogue` and `inventory`, the account flow including
+duplicate and weak-password rejection and that no response can carry a password
+hash, page-context resolution, honest sold-out reporting, product cards matching
+real rows, off-topic refusal, the sensitive-input guard and that blocked
+messages are never written to `chat_messages`, saved history for signed-in
+shoppers, guests never being stored, request size limits, and the shape and
+redaction of the audit trail.
+
+It exits non-zero on any failure, so it can be run before a submission rather
+than read.

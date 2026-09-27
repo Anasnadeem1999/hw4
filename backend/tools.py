@@ -18,6 +18,7 @@ from db import connect
 from models import (
     ChatDeps,
     ChatMessage,
+    MAX_HISTORY_TURNS,
     MAX_SEARCH_RESULTS,
     InventoryReport,
     PriceInfo,
@@ -497,7 +498,9 @@ async def list_categories(ctx: RunContext[ChatDeps]) -> list[str]:
 # Guests are never written here. Nothing calls these functions without a
 # user_id, so there is no path by which a guest conversation reaches the table.
 
-HISTORY_LIMIT = 40
+# Rows loaded when a shopper returns. Matches the per-request turn cap so the
+# agent never sees more history than a request is allowed to carry.
+HISTORY_LIMIT = MAX_HISTORY_TURNS
 
 
 def save_chat_message(

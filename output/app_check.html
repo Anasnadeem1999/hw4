@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Customs — App Check</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --blue: #00356b;
+        --blue-deep: #002247;
+        --parchment: #f6f3ec;
+        --parchment-deep: #efe9dd;
+        --paper: #fff;
+        --brass: #b08d33;
+        --ink: #14171c;
+        --ink-soft: #5b636d;
+        --line: #ded8cb;
+        --display: 'Fraunces', Georgia, serif;
+        --ui: 'Inter', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--parchment);
+        color: var(--ink);
+        font-family: var(--ui);
+        -webkit-font-smoothing: antialiased;
+      }
+      .masthead {
+        background: var(--blue);
+        color: #fff;
+        padding: 52px 28px 46px;
+      }
+      .wrap { max-width: 1060px; margin: 0 auto; }
+      .eyebrow {
+        display: flex; align-items: center; gap: 9px;
+        font-size: 11px; font-weight: 600; letter-spacing: 0.24em;
+        text-transform: uppercase; color: #e8dcbd; margin: 0 0 12px;
+      }
+      .eyebrow::before { content: ''; width: 26px; height: 1px; background: currentColor; }
+      h1 {
+        font-family: var(--display); font-weight: 600;
+        font-size: clamp(30px, 5vw, 46px); line-height: 1.06;
+        letter-spacing: -0.025em; margin: 0 0 14px;
+      }
+      .masthead p { margin: 0; max-width: 62ch; line-height: 1.7; color: rgba(255,255,255,.85); font-size: 15px; }
+      .meta {
+        display: flex; flex-wrap: wrap; gap: 26px;
+        margin-top: 30px; padding-top: 22px;
+        border-top: 1px solid rgba(255,255,255,.2);
+        font-size: 12px; color: rgba(255,255,255,.7);
+      }
+      .meta b { display: block; font-family: var(--display); font-size: 17px; color: #e8dcbd; font-weight: 600; margin-bottom: 4px; }
+
+      main { padding: 56px 28px 80px; }
+      .check { margin-bottom: 72px; }
+      .check__head {
+        display: flex; align-items: baseline; gap: 14px;
+        padding-bottom: 12px; margin-bottom: 8px;
+        border-bottom: 2px solid var(--blue);
+      }
+      .check__num {
+        font-family: var(--display); font-size: 34px; font-weight: 700;
+        color: var(--brass); line-height: 1;
+      }
+      h2 {
+        font-family: var(--display); font-weight: 600;
+        font-size: clamp(21px, 2.6vw, 27px); letter-spacing: -0.015em;
+        color: var(--blue); margin: 0;
+      }
+      .caption { font-size: 15px; line-height: 1.75; color: #2c333c; margin: 18px 0 22px; max-width: 78ch; }
+      .caption strong { color: var(--blue); }
+      figure {
+        margin: 0;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 1px 2px rgba(0,34,71,.06), 0 8px 28px rgba(0,34,71,.08);
+      }
+      figure img { display: block; width: 100%; height: auto; }
+      figcaption {
+        font-size: 12px; color: var(--ink-soft);
+        padding: 11px 16px; border-top: 1px solid var(--line);
+        background: var(--parchment-deep);
+      }
+      .proof {
+        margin-top: 20px; padding: 16px 18px;
+        background: var(--paper); border: 1px solid var(--line);
+        border-left: 3px solid var(--brass); border-radius: 0 6px 6px 0;
+        font-size: 14px; line-height: 1.7;
+      }
+      .proof h3 {
+        margin: 0 0 8px; font-size: 10px; font-weight: 700;
+        letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft);
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 13px; background: var(--parchment-deep);
+        padding: 1px 6px; border-radius: 3px;
+      }
+      footer {
+        background: var(--blue-deep); color: rgba(255,255,255,.7);
+        padding: 30px 28px; font-size: 12px;
+      }
+      @media (max-width: 640px) {
+        .check__head { flex-direction: column; gap: 4px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="masthead">
+      <div class="wrap">
+        <p class="eyebrow">Homework 4 · Problem 11</p>
+        <h1>Campus Customs — App Check</h1>
+        <p>
+          Three checks run against the live site, captured in a real browser while
+          both servers were running. The chat replies below are genuine responses
+          from the PydanticAI agent, not mock-ups.
+        </p>
+        <div class="meta">
+          <div><b>102</b> products in the database</div>
+          <div><b>localhost:5173</b> React + Vite frontend</div>
+          <div><b>localhost:8000</b> FastAPI backend</div>
+          <div><b>1440 × 1000</b> viewport, 2× scale</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- ============================================================== -->
+      <section class="check">
+        <div class="check__head">
+          <span class="check__num">1</span>
+          <h2>The chat reports honest stock and price from the database</h2>
+        </div>
+
+        <p class="caption">
+          On the Champion Reverse Weave Crewneck page I asked the assistant
+          <em>"Do you have this in large? And what does it cost?"</em> It answered
+          <strong>"sold out in L… available in M and XL… the price is $58"</strong>.
+          The database has that product at <code>L = 0</code>, <code>M = 12</code>,
+          <code>XL = 12</code>, with <code>XS</code>, <code>S</code> and
+          <code>XXL</code> also at zero, priced at <code>$58.00</code> — so every
+          part of the answer is true.
+        </p>
+
+        <figure>
+          <img
+            src="app_check_images/inventory.png"
+            alt="Chat panel answering that the Champion Reverse Weave Crewneck is sold out in L, available in M and XL, priced $58"
+          />
+          <figcaption>app_check_images/inventory.png</figcaption>
+        </figure>
+
+        <div class="proof">
+          <h3>What this proves</h3>
+          The assistant refused the sale it could not honour rather than guessing.
+          It named the exact sizes left, quoted the real price, and the product card
+          it returned shows <code>M · XL</code> — the same two sizes — because the
+          card is built from the database row the tool read, not from the reply text.
+        </div>
+      </section>
+
+      <!-- ============================================================== -->
+      <section class="check">
+        <div class="check__head">
+          <span class="check__num">2</span>
+          <h2>A category question fills the page with product cards</h2>
+        </div>
+
+        <p class="caption">
+          From the home page I asked <em>"What shirts do you have?"</em> The agent
+          searched the catalogue and <strong>four matching products appeared on the
+          page</strong> under "From your chat", as full product cards with image,
+          name, price and a short description — alongside compact versions inside the
+          chat panel.
+        </p>
+
+        <figure>
+          <img
+            src="app_check_images/search_cards.png"
+            alt="Home page showing four t-shirt product cards under the heading From your chat, after asking what shirts do you have"
+          />
+          <figcaption>app_check_images/search_cards.png</figcaption>
+        </figure>
+
+        <div class="proof">
+          <h3>What this proves</h3>
+          The chat is not a dead end. A plain-language question becomes a real,
+          browsable result set on the page, and each card opens that product's own
+          detail page. The heading quotes the question back, so it is clear why those
+          products are there.
+        </div>
+      </section>
+
+      <!-- ============================================================== -->
+      <section class="check">
+        <div class="check__head">
+          <span class="check__num">3</span>
+          <h2>Usability improvement from Problem 9 — filter by my size</h2>
+        </div>
+
+        <p class="caption">
+          On the Products page I set <strong>My size → XXL</strong>. The grid dropped
+          from <strong>102 items to 79</strong>, with the note
+          <em>"Showing only what is in stock in XXL — 23 items hidden."</em> Hovering
+          a card slides up its size run, with in-stock sizes filled and sold-out ones
+          struck through.
+        </p>
+
+        <figure>
+          <img
+            src="app_check_images/usability_size_filter.png"
+            alt="Products page filtered to XXL showing 79 items and a note that 23 items are hidden, with a hovered card revealing its size run"
+          />
+          <figcaption>app_check_images/usability_size_filter.png</figcaption>
+        </figure>
+
+        <div class="proof">
+          <h3>What this proves</h3>
+          Both halves of the improvement work on real data. 24% of size rows in this
+          catalogue are at zero, so a shopper who wears XXL would otherwise scroll 23
+          products they cannot buy. The filter removes them, and the size run on the
+          card answers "is it in my size?" before the click rather than after it.
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        Campus Customs — Yale SOM MGT 409, Homework 4. Screenshots captured with
+        Playwright against the running application.
+      </div>
+    </footer>
+  </body>
+</html>

@@ -155,6 +155,11 @@ both name parts filled despite the columns being nullable.
 - `GET /api/products` — grid data, optional `category` and `q` filters
 - `GET /api/products/{id}` — full detail including per-size stock
 - `GET /api/categories` — normalised category list
+- `GET /api/stats` — shop totals for the home page: `styles` (catalogue
+  rows, 102) and `units_in_stock` (summed inventory quantities, 5,920).
+  Kept as two separate figures because the hero counts garments on the
+  shelf, and quoting the style count there would overstate nothing but
+  understate the shop by a factor of 58.
 - `/images/*` — static mount over `data/products/`
 
 ### Decisions

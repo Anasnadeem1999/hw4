@@ -39,6 +39,7 @@ dist-ssr/
 .claude/
 CLAUDE.md
 docs/progress.md
+docs/submission.md
 
 # A damaged audit trail is set aside rather than overwritten; those copies
 # are local diagnostics, not deliverables.

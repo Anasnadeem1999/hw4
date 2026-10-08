@@ -74,6 +74,22 @@ def health() -> dict:
     return {"status": "ok", "products": count, "images": IMAGES_DIR.exists()}
 
 
+@app.get("/api/stats")
+def shop_stats() -> dict:
+    """Shop-wide totals for the home page, read live from the database.
+
+    `styles` counts catalogue rows; `units_in_stock` sums the per-size
+    quantities. They are different numbers (102 vs ~5,900) and the home page
+    labels them separately, so neither figure is ever presented as the other.
+    """
+    with connect() as conn:
+        styles = conn.execute("SELECT COUNT(*) FROM catalogue").fetchone()[0]
+        units = conn.execute(
+            "SELECT COALESCE(SUM(quantity), 0) FROM inventory"
+        ).fetchone()[0]
+    return {"styles": styles, "units_in_stock": units}
+
+
 # ------------------------------------------------------------------ catalogue
 
 

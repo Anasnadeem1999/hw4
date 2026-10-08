@@ -20,6 +20,10 @@ export function fetchProduct(productId: string) {
   return getJSON<ProductDetail>(`/api/products/${encodeURIComponent(productId)}`)
 }
 
+export function fetchShopStats() {
+  return getJSON<{ styles: number; units_in_stock: number }>('/api/stats')
+}
+
 export function fetchCategories() {
   return getJSON<string[]>('/api/categories')
 }

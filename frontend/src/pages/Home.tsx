@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { fetchProducts } from '../api'
+import { fetchProducts, fetchShopStats } from '../api'
 import ProductCard from '../components/ProductCard'
 import type { ProductSummary } from '../types'
 import { useReveal } from '../useReveal'
@@ -14,15 +14,18 @@ const CATEGORY_LINKS = [
 
 export default function Home() {
   const [featured, setFeatured] = useState<ProductSummary[]>([])
-  const [total, setTotal] = useState<number | null>(null)
+  const [units, setUnits] = useState<number | null>(null)
 
   useEffect(() => {
     fetchProducts()
-      .then((all) => {
-        setFeatured(all.slice(0, 8))
-        setTotal(all.length)
-      })
+      .then((all) => setFeatured(all.slice(0, 8)))
       .catch(() => setFeatured([]))
+
+    // The hero counts garments on the shelf, not catalogue rows, so this
+    // reads the summed inventory quantities rather than the product count.
+    fetchShopStats()
+      .then((s) => setUnits(s.units_in_stock))
+      .catch(() => setUnits(null))
   }, [])
 
   useReveal([featured.length])
@@ -54,7 +57,9 @@ export default function Home() {
 
           <div className="hero__meta">
             <div>
-              <p className="hero__stat-value">{total ?? '—'}</p>
+              <p className="hero__stat-value">
+                {units === null ? '—' : units.toLocaleString('en-US')}
+              </p>
               <p className="hero__stat-label">Pieces in stock</p>
             </div>
             <div>

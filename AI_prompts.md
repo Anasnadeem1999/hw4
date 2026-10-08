@@ -182,3 +182,16 @@ out fired `GET /api/auth/me`, got a 401, and logged a console error, so a visito
 without an account collected red errors just for being new. `/api/auth/me` now
 answers 200 with `null`, and `frontend/scripts/ui_check.mjs` was added to check 40
 shopper journeys in a real browser.
+
+### Follow-up
+
+> Is this good as per this? "[the full assignment text, all 13 problems]" I need 100/100 in this assignment, you better make sure everything is pitch perfect!!
+
+What was missing after the first prompt: the earlier passes checked that the app
+worked, but never audited it line by line against the wording of all 13 problems.
+Doing that found one factual defect that every previous pass had read straight
+past — the home page hero printed the catalogue row count, 102, under the label
+"Pieces in stock", when the shop actually holds 5,920 garments. On a project whose
+whole claim is database-accurate numbers, the most prominent figure on the site was
+the wrong one. A new `GET /api/stats` endpoint now returns `styles` and
+`units_in_stock` as separate live figures and the hero reads the second.

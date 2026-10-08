@@ -47,8 +47,15 @@ section('Pages render')
 
 await page.goto(BASE, { waitUntil: 'networkidle' })
 check('Home: hero headline present', (await page.locator('.hero__title').innerText()).length > 10)
+// The hero counts garments on the shelf, so it must equal the summed inventory
+// quantities from /api/stats -- not the catalogue row count, and not a literal.
 const heroStat = await page.locator('.hero__stat-value').first().innerText()
-check('Home: product count is live, not hardcoded', heroStat === '102', `shows "${heroStat}"`)
+const stats = await (await page.request.get(`${BASE}/api/stats`)).json()
+check('Home: stock figure is live, not hardcoded',
+  heroStat === stats.units_in_stock.toLocaleString('en-US'),
+  `shows "${heroStat}", db units=${stats.units_in_stock}`)
+check('Home: hero reports units, not the style count',
+  heroStat !== String(stats.styles), `styles=${stats.styles}`)
 check('Home: featured products loaded', (await page.locator('.card').count()) >= 8)
 
 await page.click('text=About Us')

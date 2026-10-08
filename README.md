@@ -135,7 +135,11 @@ frontend/
   src/components/      NavBar, ProductCard, ChatWidget, ChatMatches, Footer
   src/auth.tsx         Session state
   src/chatResults.tsx  Products the assistant has matched, shown on the page
-  scripts/             Playwright scripts that capture output/app_check.html
+  scripts/             Playwright scripts: app_check capture, and ui_check.mjs
+                       which drives 41 shopper journeys in a real browser
+
+scripts/
+  verify_all.py        41 checks against the running API and the database
 
 output/
   harness.md           How the system works and why it is built this way
@@ -147,6 +151,24 @@ output/
 
 data/                  The provided data pack — not committed
 ```
+
+## Checking it works
+
+With both servers running, two suites verify the site end to end. Neither
+needs any setup beyond the data pack and `.env`.
+
+```bash
+.venv/Scripts/python.exe scripts/verify_all.py
+```
+
+```bash
+node frontend/scripts/ui_check.mjs
+```
+
+The first checks the API, the agent's tools and the audit trail against the
+database; the second drives a real browser through the shopper journeys,
+including chat search, the product cards it puts on the page, and sign-in.
+Both report `41/41` on a healthy checkout.
 
 ## Notes
 

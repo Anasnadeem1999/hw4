@@ -1450,5 +1450,227 @@
     "price_guardrail_corrected": false,
     "stop_reason": "completed",
     "reply": "We’ve got a good shirt range, Test User. I’d point you to the **2025 Yale–Harvard Game tee** for The Game, the **Boola Boola tee** for classic Yale spirit, or the **Big Yale Tri Blend** for a straightforward YALE wordmark; each is **$32**. The Game tee is available in XS–XXL, while the Boola Boola and Big Yale Tri Blend are sold out in L."
+  },
+  {
+    "id": "5081437ca256",
+    "at": "2026-10-08T00:49:13+00:00",
+    "duration_ms": 6976,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": "/products/champion-reverse-weave-crewneck",
+      "product_id": "champion-reverse-weave-crewneck"
+    },
+    "message": "Do you have this in large? And how much is it?",
+    "tool_calls": [
+      {
+        "at": "2026-10-08T00:49:11+00:00",
+        "tool": "check_size_availability",
+        "args": "product_id='champion-reverse-weave-crewneck', size='L'",
+        "result": "Champion Reverse Weave Crewneck, size=L, in_stock=False, quantity=0",
+        "ms": 0
+      },
+      {
+        "at": "2026-10-08T00:49:11+00:00",
+        "tool": "get_price",
+        "args": "product_id='champion-reverse-weave-crewneck'",
+        "result": "Champion Reverse Weave Crewneck, price=58.0",
+        "ms": 0
+      }
+    ],
+    "tool_call_count": 2,
+    "tool_budget": 8,
+    "products_returned": [
+      "champion-reverse-weave-crewneck"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "The Champion Reverse Weave Crewneck is sold out in **L**, I’m afraid. It’s **$58**, and currently available in **M and XL**."
+  },
+  {
+    "id": "cd419ded28d1",
+    "at": "2026-10-08T00:49:17+00:00",
+    "duration_ms": 3646,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "What shirts do you have?",
+    "tool_calls": [
+      {
+        "at": "2026-10-08T00:49:15+00:00",
+        "tool": "search_products",
+        "args": "query='shirts', category='T-Shirts', limit=4",
+        "result": "4 results: 2025 Yale Vs Harvard T Shirt, Benjamin Franklin T Shirt, Big Yale Tri Blend T Shirt +1 more",
+        "ms": 1
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "2025-yale-vs-harvard-t-shirt",
+      "benjamin-franklin-t-shirt",
+      "big-yale-tri-blend-t-shirt",
+      "boola-boola-t-shirt"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got a good shirt range, Test User. I’d point you to the **2025 Yale–Harvard Game tee** for The Game, the **Boola Boola tee** for classic Yale spirit, or the **Big Yale Tri Blend** for a simple YALE wordmark; they’re all **$32**. The Game tee is available in every size from XS through XXL, while the Boola Boola and Big Yale Tri Blend are sold out in L."
+  },
+  {
+    "id": "966380977f06",
+    "at": "2026-10-08T00:49:18+00:00",
+    "duration_ms": 1631,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "Who won the 1998 world cup?",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "That’s outside what I can help with here. I can help you find Yale apparel instead."
+  },
+  {
+    "id": "504d3e2b682f",
+    "at": "2026-10-08T00:49:18+00:00",
+    "duration_ms": 0,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "my card is [redacted:16 digits]",
+    "tool_calls": [],
+    "tool_call_count": 0,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "blocked_sensitive_input",
+    "reply": "Please don't share card numbers, passwords, or similar details here — this chat isn't a secure place for them, and I have no way to take a payment. I've not kept what you just sent. If you'd like to buy something, you can order it on the product page or come by the shop at 57 Broadway. Happy to help you find the right piece in the meantime."
+  },
+  {
+    "id": "e203586cf031",
+    "at": "2026-10-08T00:49:19+00:00",
+    "duration_ms": 688,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": null,
+      "name": "guest"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "What do you sell?",
+    "tool_calls": [
+      {
+        "at": "2026-10-08T00:49:19+00:00",
+        "tool": "list_categories",
+        "args": "-",
+        "result": "6 results: T-Shirts, Crewnecks, Hoodies +3 more",
+        "ms": 0
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We carry Yale T-shirts, crewnecks, hoodies, quarter-zips, jackets, and performance gear. If you’re shopping for a particular residential college, The Game, or just everyday Yale Blue, I can point you toward something good."
+  },
+  {
+    "id": "9bab51ad61ee",
+    "at": "2026-10-08T00:49:39+00:00",
+    "duration_ms": 4722,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": "/",
+      "product_id": null
+    },
+    "message": "What shirts do you have?",
+    "tool_calls": [
+      {
+        "at": "2026-10-08T00:49:37+00:00",
+        "tool": "search_products",
+        "args": "query='Yale shirts and tees', category='T-Shirts', limit=8",
+        "result": "8 results: 2025 Yale Vs Harvard T Shirt, Big Yale Tri Blend T Shirt, Yale Bowl T Shirt +5 more",
+        "ms": 2
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "2025-yale-vs-harvard-t-shirt",
+      "big-yale-tri-blend-t-shirt",
+      "yale-bowl-t-shirt",
+      "yale-dad-t-shirt",
+      "yale-diving-t-shirt",
+      "yale-sports-t-shirt-field-hockey",
+      "district-tri-blend-t-shirt-vintage-shield",
+      "football-left-chest-t-shirt"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got a good shirt range, Test User. I’d point you to the **2025 Yale–Harvard Game tee** for The Game, the **Yale Bowl tee** for a vintage feel, or the **Big Yale Tri Blend** for a simple YALE wordmark. They’re all **$32**, and the cards show the current colors and sizes."
+  },
+  {
+    "id": "61307a42654b",
+    "at": "2026-10-08T00:49:58+00:00",
+    "duration_ms": 4775,
+    "model": "gpt-5.6-luna",
+    "shopper": {
+      "user_id": 1,
+      "name": "Test User"
+    },
+    "page": {
+      "path": null,
+      "product_id": null
+    },
+    "message": "show me quarter-zips",
+    "tool_calls": [
+      {
+        "at": "2026-10-08T00:49:56+00:00",
+        "tool": "search_products",
+        "args": "query='quarter-zips', category='Quarter-Zips', limit=4",
+        "result": "4 results: Benjamin Franklin 1 4 Zip, Berkeley 1 4 Zip, Branford 1 4 Zip +1 more",
+        "ms": 4
+      }
+    ],
+    "tool_call_count": 1,
+    "tool_budget": 8,
+    "products_returned": [
+      "benjamin-franklin-1-4-zip",
+      "berkeley-1-4-zip",
+      "branford-1-4-zip",
+      "morse-1-4-zip"
+    ],
+    "price_guardrail_corrected": false,
+    "stop_reason": "completed",
+    "reply": "We’ve got several residential-college quarter-zips. The **Morse 1/4 Zip** is a good understated pick, while **Branford** has a more colorful crest; both are **$72**. The cards show the current colors and sizes."
   }
 ]

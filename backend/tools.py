@@ -143,7 +143,11 @@ def row_to_detail(conn: sqlite3.Connection, row: sqlite3.Row) -> ProductDetail:
 
 
 def row_to_card(conn: sqlite3.Connection, row: sqlite3.Row) -> ProductCard:
-    summary = row_to_summary(row, [s.size for s in sizes_for(conn, row["product_id"]) if s.in_stock])
+    # One inventory read, reused for both the summary and the card. Cards are
+    # built once per search result, so a second identical query here would
+    # double the inventory round-trips on every chat turn for no new data.
+    in_stock = [s.size for s in sizes_for(conn, row["product_id"]) if s.in_stock]
+    summary = row_to_summary(row, in_stock)
     return ProductCard(
         product_id=summary.product_id,
         name=summary.name,
@@ -151,7 +155,7 @@ def row_to_card(conn: sqlite3.Connection, row: sqlite3.Row) -> ProductCard:
         image_url=summary.image_url,
         category=summary.category,
         short_description=summary.short_description,
-        available_sizes=[s.size for s in sizes_for(conn, row["product_id"]) if s.in_stock],
+        available_sizes=in_stock,
     )
 
 
